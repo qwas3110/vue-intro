@@ -14,11 +14,11 @@
         <div class="product">
 
             <div class="product-image">
-                <img :src="image" :alt="altText">
+                <img :src="img" :alt="altText">
             </div>
 
             <div class="product-info">
-                <h1>{{product}}</h1>
+                <h1>{{title}}</h1>
                 <a :href="link" target="_blank">More products like this</a>
                 <p v-if="inStock">In Stock</p>
                 <p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
@@ -31,7 +31,7 @@
                      :key="index"
                      class="color-box"
                      :style="{ backgroundColor: variant.variantColor }"
-                     @mouseover="changeColor(variant.variantImage)"
+                     @mouseover="changeColor(index)"
                     >
                 </div>
 
