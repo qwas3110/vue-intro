@@ -30,8 +30,14 @@
                 <div v-for="(variant,index) of variants"
                      :key="index"
                     >
-                    <p>{{variant.variantColor}}</p>
+                    <p @mouseover="changeColor(variant.variantImage)">{{variant.variantColor}}</p>
                 </div>
+
+                <div class="cart">
+                    <p>Cart({{cart}})</p>
+                </div>
+                <button @click="addToCart">Add Cart</button>
+                <button @click="removeCart">Remove Cart</button>
             </div>
         </div>
     </div>
