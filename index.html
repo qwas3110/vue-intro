@@ -22,6 +22,16 @@
                 <a :href="link" target="_blank">More products like this</a>
                 <p v-if="inStock">In Stock</p>
                 <p v-else>Out of Stock</p>
+
+                <ul>
+                    <li v-for="detail of details">{{detail}}</li>
+                </ul>
+
+                <div v-for="(variant,index) of variants"
+                     :key="index"
+                    >
+                    <p>{{variant.variantColor}}</p>
+                </div>
             </div>
         </div>
     </div>
